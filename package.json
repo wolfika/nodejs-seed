@@ -1,0 +1,40 @@
+{
+	"name": "nodejs-seed",
+	"version": "0.0.1",
+	"description": "Node.js seed project",
+	"license": "MIT",
+	"repository": "wolfika/nodejs-seed",
+	"author": {
+		"name": "Máté Farkas",
+		"email": "info@wolfika.eu",
+		"url": "github.com/wolfika"
+	},
+	"engines": {
+		"node": ">=8"
+	},
+	"scripts": {
+		"start": "node -r dotenv/config index.js",
+		"test": "xo && nyc ava"
+	},
+	"dependencies": {
+		"codecov": "^3.0.2",
+		"dotenv": "^6.0.0"
+	},
+	"devDependencies": {
+		"ava": "^0.25.0",
+		"nyc": "^12.0.2",
+		"xo": "^0.21.1"
+	},
+	"xo": {
+		"esnext": true,
+		"rules": {
+			"new-cap": 0
+		}
+	},
+	"nyc": {
+		"reporter": [
+			"lcov",
+			"text"
+		]
+	}
+}
