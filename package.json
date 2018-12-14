@@ -7,28 +7,20 @@
 	"author": {
 		"name": "Máté Farkas",
 		"email": "info@wolfika.eu",
-		"url": "github.com/wolfika"
+		"url": "https://github.com/wolfika"
 	},
 	"engines": {
-		"node": ">=8"
+		"node": ">=10"
 	},
 	"scripts": {
+		"coverage": "nyc report && codecov",
+		"lint": "eslint index.js",
 		"start": "node -r dotenv/config index.js",
-		"test": "xo && nyc ava"
+		"test": "npm run lint && nyc ava"
 	},
-	"dependencies": {
-		"codecov": "^3.0.2",
-		"dotenv": "^6.0.0"
-	},
-	"devDependencies": {
-		"ava": "^0.25.0",
-		"nyc": "^12.0.2",
-		"xo": "^0.21.1"
-	},
-	"xo": {
-		"esnext": true,
-		"rules": {
-			"new-cap": 0
+	"husky": {
+		"hooks": {
+			"pre-push": "npm run test"
 		}
 	},
 	"nyc": {
@@ -36,5 +28,16 @@
 			"lcov",
 			"text"
 		]
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"ava": "^0.25.0",
+		"codecov": "^3.1.0",
+		"eslint": "^5.10.0",
+		"eslint-config-prettier": "^3.3.0",
+		"eslint-plugin-prettier": "^3.0.0",
+		"husky": "^1.2.1",
+		"nyc": "^13.1.0",
+		"prettier": "^1.15.3"
 	}
 }
