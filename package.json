@@ -10,7 +10,7 @@
 		"url": "https://github.com/wolfika"
 	},
 	"engines": {
-		"node": ">=10"
+		"node": ">=13"
 	},
 	"scripts": {
 		"coverage": "nyc report && codecov",
@@ -31,13 +31,13 @@
 	},
 	"dependencies": {},
 	"devDependencies": {
-		"ava": "^0.25.0",
-		"codecov": "^3.1.0",
-		"eslint": "^5.10.0",
-		"eslint-config-prettier": "^3.3.0",
-		"eslint-plugin-prettier": "^3.0.0",
-		"husky": "^1.2.1",
-		"nyc": "^13.1.0",
-		"prettier": "^1.15.3"
+		"ava": "^3.5.1",
+		"codecov": "^3.6.5",
+		"eslint": "^6.8.0",
+		"eslint-config-prettier": "^6.10.1",
+		"eslint-plugin-prettier": "^3.1.2",
+		"husky": "^4.2.3",
+		"nyc": "^15.0.0",
+		"prettier": "^2.0.2"
 	}
 }
