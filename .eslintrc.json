@@ -1,16 +1,9 @@
 {
-  "env": {
-    "commonjs": true,
-    "es6": true,
-    "node": true
-  },
-  "extends": ["prettier"],
-  "parserOptions": {
-    "ecmaVersion": 2017,
-    "sourceType": "module"
-  },
-  "plugins": ["prettier"],
+  "root": true,
+  "extends": "airbnb-typescript-prettier",
   "rules": {
-    "prettier/prettier": "error"
-  }
+    "import/prefer-default-export": 0,
+    "@typescript-eslint/explicit-module-boundary-types": 0
+  },
+  "ignorePatterns": ["node_modules", "dist"]
 }
